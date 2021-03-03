@@ -1,0 +1,221 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Montserrat', sans-serif;
+}
+li{
+    list-style-type: none;
+}
+a{
+    text-decoration: none;
+}
+html{
+    background-image: url(img/background1.png);
+}
+.body-container{
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 1369px;
+    width: 100%;
+    padding: 1em;
+}
+
+.contacts{
+    background-color: #d2d4d2;
+    max-width: 1340px;
+    width: 100%;
+    height: 30px;
+    padding-top: 4px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 1em;
+}
+.contacts__list{
+    display: flex;
+    justify-content: space-around;
+}
+.contacts__list span{
+    color: #424242;
+}
+.logo{
+    display: flex;
+}
+.tg-logo::before{
+    content: url(img/telegram.svg);
+}
+.mail-logo::before{
+    content: url(img/email.svg);
+}
+.github-logo::before{
+    content: url(img/github.png);
+}
+.tg-logo::before, .mail-logo::before, .github-logo::before{
+    display: flex;
+    margin-right: 1em;
+    width: 20px;
+    height: 20px;
+}
+.personal-info{
+    margin: 3em;
+    text-align: center;
+}
+.personal-info p{
+    font-size: 1.2rem;
+    margin-top: 1em;
+}
+.content{
+    width: 65%; 
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 1em;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 3em;
+}
+.content__title{
+    text-align: center;
+    margin-bottom: 1em;
+}
+.content__description{
+    text-align: center;
+    padding: .5em 1em;
+}
+.content__link{
+    display: flex;
+    place-content: center;
+}
+.content__img{
+    height: auto;
+    margin-bottom: 1em;
+    width: 80%;
+}
+
+
+
+.tags__list{
+    display: flex;
+    flex-wrap: wrap;
+}
+.tags__item{
+    height: 30px;
+    width: auto;
+    align-items: center;
+    text-align: center;
+    color: #e0d7eb;
+    background-color: #424242;
+    border-radius: 100px;
+    padding: 5px 12px;
+    border: none;
+    margin: 7px 7px 7px 0;
+    text-align: center;
+}
+
+
+.slider {
+    position: relative;
+    overflow: hidden;
+  }
+  .slider__row1{
+      display: flex;
+      justify-content: space-between;
+      margin-bottom: 54px;
+  }
+
+  .slider__wrapper {
+    display: flex;
+    transition: transform 0.6s ease;
+    max-width: 1400px;
+    width: 100vw;
+    height: auto;
+    background-color:#d2d4d2;
+    margin-bottom: 5%;
+
+  }
+
+  .slider__item {
+    flex: 0 0 98.5%;
+    max-width: 95%;
+    width: 549px;
+    height: auto;
+    background-color: #d2d4d2;
+    padding: 2em;
+  
+  }
+  .slider__item iframe{
+    width: 549px;
+    height: auto;
+  }
+  .slider__controls{
+    display: flex;
+    justify-content: space-between;
+  }
+  .slider__control{
+    width: 40px;
+    height: 39px;
+    display: flex; 
+    align-items: center; 
+    justify-content: center;
+    position: absolute;
+    top: 50%;
+    margin-top: -40px;
+    z-index: 3;
+}
+    .slider__control_right{
+        right: 0;
+    }
+.slider__control_left::before{
+    content: url(img/controls-arrow-left.svg);
+    position: absolute;
+}
+.slider__control_right::before{
+    content: url(img/controls-arrow-right.svg);
+}
+.slider__item>div {
+    line-height: 250px;
+    font-size: 100px;
+    text-align: center;
+  }
+
+@media screen and (max-width: 992px){
+    .slider__wrapper{
+        width: 100vw;
+    }
+}/* 
+@media screen and (max-width: 560px){
+    .slider__wrapper{
+        max-width: 475px;
+    }
+} */
+@media screen and (max-width: 475px){
+    .contacts__list span{
+        display: none;
+    }
+    .contacts__list{
+        justify-content: space-around;
+    }
+    .personal-info{
+        font-size: .8em;
+        margin: 1em;
+    }
+    .personal-info p{
+        font-size: .8em;
+    }
+    .content{
+        padding: .5em;
+        width: 85%;
+    }
+    .content__title{
+        font-size: 1em;
+    }
+    .content__description{
+        font-size: .8em;    
+    }
+    .slider__wrapper{
+        max-width: 450px;
+    }
+    
+}
